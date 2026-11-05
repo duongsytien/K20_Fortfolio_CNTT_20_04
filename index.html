@@ -1,84 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lab 5 · Portfolio thực hành</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Dương Sỹ Tiến – Portfolio CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header><a class="brand" href="#gioi-thieu">FIT / PORTFOLIO V5</a>
-        <nav class="menu" aria-label="Điều hướng chính">
-            <a href="#gioi-thieu">Giới thiệu</a><a href="#ky-nang">Kỹ năng</a>
-            <a href="#du-an">Dự án</a><a href="#lo-trinh">Lộ trình</a><a href="#lien-he">Liên hệ</a>
-        </nav>
-    </header>
-    <main>
-        <section class="hero" id="gioi-thieu"><span>LAB 5 · HTML5 + CSS3</span>
-            <h1>Xin chào, tôi là TIẾN </h1>
-            <p>Sinh viên CNTT đang xây dựng Portfolio có thể dùng bằng chuột và bàn phím.</p>
-            <a class="button" href="#lien-he">Liên hệ với tôi</a>
-        </section>
-        <section id="ky-nang">
-            <h2>Kỹ năng</h2>
-            <ul class="skills">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Responsive</li>
-            </ul>
-        </section>
-        <section id="du-an">
-            <h2>Dự án</h2>
-            <div class="project-grid">
-                <article class="card"><span class="tag">HTML5</span>
-                    <h3>Trang giới thiệu cá nhân</h3>
-                    <p>Tổ chức nội dung với header, nav, main và footer.</p><a href="#lo-trinh">Xem lộ trình HTML5</a>
-                </article>
-                <article class="card"><span class="tag">Responsive</span>
-                    <h3>Bố cục nhiều thiết bị</h3>
-                    <p>Chia cột bằng Grid, dùng rem và media query.</p><a href="#lo-trinh">Xem lộ trình CSS</a>
-                </article>
-                <article class="card"><span class="tag">Trải nghiệm</span>
-                    <h3>Form liên hệ dễ dùng</h3>
-                    <p>Nhãn rõ ràng, kiểm tra dữ liệu và chỉ báo focus.</p><a href="#lien-he">Thử form liên hệ</a>
-                </article>
-            </div>
-        </section>
-        <section id="lo-trinh">
-            <h2>Lộ trình học tập</h2>
-            <ol>
-                <li>Lab 2: nội dung HTML5.</li>
-                <li>Lab 3: CSS, Flexbox và Grid.</li>
-                <li>Lab 4: rem và media query.</li>
-                <li>Lab 5: tương tác và form.</li>
-            </ol>
-        </section>
-        <section id="lien-he">
-            <h2>Liên hệ</h2>
-            <p>Form mô phỏng, chưa gửi email hoặc lưu vào cơ sở dữ liệu. Chỉ nhập dữ liệu giả.</p>
-            <form action="ket-qua.html" method="get">
-                <div class="form-field">
-                    <label for="fullname">Họ tên (bắt buộc)</label><!-- 4.1 -->
-                    <input id="fullname" name="fullname" type="text" autocomplete="name" required
-                        minlength="2"><!-- 4.4 -->
-                </div>
-                <div class="form-field"><label for="email">Email (bắt buộc)</label>
-                    <input id="email" name="email" type="email" required autocomplete="email"
-                        aria-describedby="email-help"><!-- 4.2; 4.3 -->
-                    <p class="help" id="email-help">Ví dụ: an@example.com</p>
-                </div>
-                <div class="form-field"><label for="message">Nội dung (bắt buộc)</label>
-                    <textarea id="message" name="message" rows="4" required minlength="10" maxlength="600"
-                        aria-describedby="message-help"></textarea><!-- 4.5; 4.6; 4.7 -->
-                    <p class="help" id="message-help">Nhập từ 10 đến 500 ký tự.</p>
-                </div>
-                <button class="button" type="submit">Kiểm tra biểu mẫu</button><!-- 4.8 -->
-            </form>
-        </section>
-    </main>
-    <footer>FIT – DNU · Bài mẫu Lab 5 · HTML/CSS thuần</footer>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#gioi-thieu">SỸ Tiến</a>
+      <nav aria-label="Menu chính">
+        <ul class="menu">
+          <li><a href="#gioi-thieu">Giới thiệu</a></li>
+          <li><a href="#ky-nang">Kỹ năng</a></li>
+          <li><a href="#du-an">Dự án</a></li>
+          <li><a href="#hoc-tap">Học tập</a></li>
+          <li><a href="#lien-he">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="gioi-thieu" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-role">Sinh viên năm nhất, ngành Công nghệ Thông tin</p>
+          <h1>DƯƠNG SỸ TIẾN</h1>
+          <p>Mình thích viết những chương trình nhỏ giải quyết việc thật: tính điểm học phần, ghi chú bài giảng, trang web cho câu lạc bộ. Mục tiêu năm nay là làm chắc nền tảng C++ và xây được một ứng dụng Flutter chạy trên điện thoại.</p>
+          <a class="button" href="#du-an">Xem dự án</a>
+        </div>
+        <img class="avatar" src="assets/avatar.svg.webp" alt="Ảnh đại diện minh họa của SỸ TIẾN">
+      </div>
+    </section>
+
+    <section id="ky-nang" class="section">
+      <div class="container">
+        <h2>Kỹ năng</h2>
+        <ul class="skills">
+          <li>biết nấu ăn</li>
+          <li>biết chơi bóng </li>
+          <li>ngủ </li>
+          <li>viết code</li>
+          <li>chơi all game</li>
+          <li>Làm việc nhóm theo </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="du-an" class="section section-alt">
+      <div class="container">
+        <h2>Dự án</h2>
+        <div class="projects">
+          <article class="card">
+            <img src="assets/du-an-1.svg" alt="Giao diện dòng lệnh của chương trình tính điểm">
+            <h3>Chương trình tính điểm học phần</h3>
+            <p>Viết bằng C++, đọc điểm thành phần và tính điểm tổng kết theo trọng số của đề cương.</p>
+            <a href="#">github.com/minhan-demo/tinh-diem</a>
+          </article>
+          <article class="card">
+            <img src="assets/du-an-2.svg" alt="Màn hình danh sách ghi chú trên điện thoại">
+            <h3>Ứng dụng ghi chú bài giảng bằng Flutter</h3>
+            <p>Ghi chú theo môn học, có tìm kiếm và đánh dấu nội dung cần ôn trước kỳ thi.</p>
+            <a href="#">github.com/minhan-demo/ghi-chu</a>
+          </article>
+          <article class="card">
+            <img src="assets/du-an-3.svg" alt="Trang chủ website câu lạc bộ">
+            <h3>Website giới thiệu Câu lạc bộ Tin học Khoa Công nghệ Thông tin nhiệm kỳ 2025–2026</h3>
+            <p>Trang tĩnh giới thiệu hoạt động, lịch sinh hoạt và cách đăng ký thành viên.</p>
+            <a href="#">github.com/minhan-demo/WebsiteCauLacBoTinHocKhoaCNTT</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="hoc-tap" class="section">
+      <div class="container">
+        <h2>Học lực</h2>
+        <table class="study">
+          <thead>
+            <tr><th>Học kỳ</th><th>Học phần tiêu biểu</th><th>Sản phẩm</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HK1</td><td>Nhập môn lập trình (C++)</td><td>Chương trình tính điểm</td></tr>
+            <tr><td>HK2</td><td>Thiết kế web (FIT4014)</td><td>Portfolio CV này</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="lien-he" class="section section-alt">
+      <div class="container">
+        <h2>Liên hệ</h2>
+        <ul class="contact">
+          <li><strong>Email:</strong> <a href="mailto:minhan.cntt.demo@example.com">minhan.cntt.demo@example.com</a></li>
+          <li><strong>GitHub:</strong> <a href="#">github.com/minhan-demo</a></li>
+          <li><strong>Lớp:</strong> CNTT - Khóa demo</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Portfolio CV - bản V3. Dữ liệu minh họa, không phải thông tin cá nhân thật.</p>
+    </div>
+  </footer>
+  <link rel="stylesheet" href="css/style.css">
 </body>
-<link rel="stylesheet" href="css/style.css">
 </html>
+
